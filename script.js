@@ -210,7 +210,7 @@ const predict = () => {
       .then(data => {
         document.getElementById('fare').classList.remove('d-none');
         const fareResult = document.getElementById('predicted-fare');
-        const fare_amount  = Math.round(data['fare_amount'] * 100) / 100
+        const fare_amount = Math.round(data['fare_amount'] * 100) / 100
         fareResult.innerText = `$${fare_amount}`;
       })
       .catch((error) => {
